@@ -1,12 +1,14 @@
-import HeroSection from './components/HeroSection';
+import NavBar from "./components/Navbar";
+import Hero from "./components/HeroPage";
+import ProductCard from "./components/ProductCard";
 
 export default function Homepage() {
   return (
     <>
-      <HeroSection />
-      <div style={{ textAlign: 'center', marginTop: '100px' }}>
-        <h1>Welcome to the Homepage!</h1>
-      </div>
+      <NavBar />
+      <Hero/>
+      <ProductCard/>
+      
     </>
   );
 }

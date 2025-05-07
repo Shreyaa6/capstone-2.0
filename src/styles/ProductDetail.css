@@ -1,0 +1,41 @@
+.split-layout {
+    display: flex;
+    gap: 2rem;
+    padding: 20px;
+  }
+  
+  .left-panel, .right-panel {
+    flex: 1;
+  }
+  
+  .right-panel select,
+  .right-panel input {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .case-preview {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    margin-top: 10px;
+  }
+  
+  .case-base {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .case-overlay {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 70%;
+    height: 50%;
+    object-fit: contain;
+    opacity: 0.85;
+    pointer-events: none;
+  }
+  

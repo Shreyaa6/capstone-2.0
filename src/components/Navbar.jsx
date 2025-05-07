@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import styles from '../styles/HeroSection.module.css';
+import styles from '../styles/NavBar.module.css';
 
-export default function HeroSection() {
+export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
