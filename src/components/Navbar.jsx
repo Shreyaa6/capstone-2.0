@@ -11,12 +11,13 @@ export default function NavBar() {
   return (
     <header className={styles.navbar}>
       <div className={styles.logo} onClick={handleLogoClick}>
-        MyLogo
+        Destiny
       </div>
 
       <nav className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`}>
         <Link to="/homepage">Home</Link>
         <a href="#about">About</a>
+        <Link to="/products">Products</Link>
         <a href="#services">Services</a>
         <a href="#blog">Blog</a>
       </nav>

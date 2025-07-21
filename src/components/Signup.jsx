@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { users } from '../users';
 import styles from '../styles/Signup.module.css';
-
+import Footer from './Footer';
 
 export default function Signup() {
   const [email, setEmail] = useState('');
@@ -10,24 +9,30 @@ export default function Signup() {
   const navigate = useNavigate();
 
   const handleSignup = () => {
-    if (users.some(sh => sh.email === email)) {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    if (users.some(user => user.email === email)) {
       alert('User already exists!');
     } else {
-      users.push({ email, password });
+      const newUsers = [...users, { email, password }];
+      localStorage.setItem('users', JSON.stringify(newUsers));
       alert('Signup successful!');
       navigate('/');
     }
   };
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.signup}>Signup</h2>
-      <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
-      <button onClick={handleSignup}>Signup</button>
-      <p>
-        Already have an account? <Link to="/">Login</Link>
-      </p>
-    </div>
+    <>
+      <div className={styles.container}>
+        <h2 className={styles.signup}>Signup</h2>
+        <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />
+        <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+        <button onClick={handleSignup}>Signup</button>
+        <p>
+          Already have an account? <Link to="/">Login</Link>
+        </p>
+      </div>
+      <Footer />
+    </>
   );
 }

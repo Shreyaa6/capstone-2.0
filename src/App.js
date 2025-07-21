@@ -3,6 +3,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Homepage from './Homepage';
 import ProductDetail from './components/ProductDetail';
+import ProductPage from './components/ProductCard';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/products" element={<ProductPage />} />
       </Routes>
     </Router>
   );

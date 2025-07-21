@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { products } from '../data/products';
 import '../styles/ProductCard.css';
+import Footer from './Footer';
 
 const ProductCard = () => {
   const navigate = useNavigate();
@@ -30,4 +31,13 @@ const ProductCard = () => {
   );
 };
 
-export default ProductCard;
+const ProductPage = () => {
+  return (
+    <>
+      <ProductCard />
+      <Footer />
+    </>
+  );
+};
+
+export default ProductPage;

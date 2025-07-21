@@ -1,9 +1,12 @@
+body{
+  margin: 0px;
+}
 .container {
     width: 300px;
     margin: 100px auto;
     padding: 30px;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 3px solid #7f4f24;
     border-radius: 10px;
   }
   
