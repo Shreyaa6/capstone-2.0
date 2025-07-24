@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { products } from '../data/products';
 import '../styles/ProductCard.css';
 import Footer from './Footer';
+import NavBar from './Navbar';
 
 const ProductCard = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const ProductCard = () => {
       {products.map(product => (
         <div className="product-card" key={product.id}>
           <img
-            src="/heroImage01.jpeg"
+            src={product.image}
             alt={product.name}
             className="product-image"
           />
@@ -32,8 +33,10 @@ const ProductCard = () => {
 };
 
 const ProductPage = () => {
+  const navigate = useNavigate();
   return (
     <>
+      <NavBar />
       <ProductCard />
       <Footer />
     </>

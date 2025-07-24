@@ -1,0 +1,135 @@
+.servicesPage {
+  min-height: 100vh;
+  background: #faf9f7;
+  padding: 2.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.heading {
+  font-size: 2.7rem;
+  letter-spacing: 0.08em;
+  color: #2d2d2d;
+  font-family: 'Source Serif 4', serif;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.serviceSection, .serviceSectionAlt {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2.5rem 4vw;
+  margin-bottom: 2.5rem;
+}
+
+.serviceSection {
+  flex-direction: row;
+}
+
+.serviceSectionAlt {
+  flex-direction: row-reverse;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+}
+
+.imageBox {
+  flex: 1 1 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+}
+
+.imageBox img {
+  width: 100%;
+  max-width: 370px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  border: 2px solid #e5e3df;
+}
+
+.infoBox {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.infoBox h2 {
+  font-size: 1.5rem;
+  color: #3a2c1a;
+  margin-bottom: 1rem;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 1.08rem;
+  color: #5a4d3b;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.subServices {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subServices li {
+  margin-bottom: 0.7rem;
+  font-size: 1.05rem;
+  color: #3a2c1a;
+  padding-left: 0.5rem;
+  position: relative;
+}
+
+.subServices li:before {
+  content: '\2022';
+  color: #bfa16a;
+  font-size: 1.2rem;
+  position: absolute;
+  left: -1rem;
+  top: 0.1rem;
+}
+
+.iconRow {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.iconBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.1rem;
+  color: #bfa16a;
+  min-width: 110px;
+}
+
+.iconBox span {
+  font-size: 1rem;
+  color: #3a2c1a;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-family: 'Public Sans', Arial, sans-serif;
+}
+
+@media (max-width: 900px) {
+  .serviceSection, .serviceSectionAlt {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 2vw;
+  }
+  .imageBox img {
+    max-width: 95vw;
+  }
+} 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from '../styles/Signup.module.css';
 import Footer from './Footer';
+import NavBar from './Navbar';
 
 export default function Signup() {
   const [email, setEmail] = useState('');
@@ -23,6 +24,7 @@ export default function Signup() {
 
   return (
     <>
+      <NavBar />
       <div className={styles.container}>
         <h2 className={styles.signup}>Signup</h2>
         <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />

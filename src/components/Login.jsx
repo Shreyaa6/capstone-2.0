@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import styles from '../styles/Login.module.css';
 import loginBg from '../assets/login.jpg';
 import Footer from './Footer';
+import NavBar from './Navbar';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -23,15 +24,8 @@ export default function Login() {
 
   return (
     <>
-      <div style={{
-        minHeight: '100vh',
-        backgroundImage: `url(${loginBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+      <NavBar />
+      <div className={styles.background}>
         <div className={styles.container}>
           <h2>Login</h2>
           <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />

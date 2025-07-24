@@ -22,4 +22,14 @@ body{
     margin-top: 10px;
     cursor: pointer;
   }
+
+.background {
+  min-height: 100vh;
+  background-image: url('../assets/login.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   

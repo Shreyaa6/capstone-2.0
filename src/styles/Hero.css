@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #8f5b26b9;
+  background-color: #edede9;
   gap: 40px;
   height: 100vh;
   width: 100vw;
@@ -18,7 +18,6 @@
 .hero-text {
   max-width: 600px;
   font-family: 'Public Sans', 'Source Serif 4', Arial, sans-serif;
-  transition: color 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
   padding-left: 1rem;
   text-align: left;
 }
@@ -26,37 +25,33 @@
 .hero-text h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #bb9457;
   font-family: 'Winky Rough', 'Faculty Glyphic', 'Italianno', cursive, sans-serif;
-  transition: color 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  color: #f3f3f3;
+  color: #bb9457;
   margin-bottom: 30px;
   line-height: 1.6;
   font-family: 'Source Serif 4', 'Public Sans', serif;
-  transition: color 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
 }
 
 .hero-text a {
   display: inline-block;
   padding: 14px 28px;
   font-size: 1rem;
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: #d5bdaf;
+  color: #bb9457;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   font-family: 'Public Sans', Arial, sans-serif;
-  transition: background-color 0.3s ease, box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: 0 4px 18px rgba(0,0,0,0.18), 0 1.5px 4px rgba(0,0,0,0.12);
+  transition: background-color 0.3s ease ;
 }
 
 .hero-text a:hover {
-  background-color: #0056b3;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.16);
+  background-color: #e3d5ca;
   transform: translateY(-2px) scale(1.04);
 }
 
@@ -65,15 +60,9 @@
   height: auto;
   max-height: 550px;
   border-radius: 16px;
-  /* padding-right: 20px; */
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.2),   /* main soft shadow */
-    0 4px 12px rgba(0, 0, 0, 0.1),   /* subtle inner layer */
-    0 1px 2px rgba(255, 255, 255, 0.05) inset; /* soft light edge */
 }
 
 
-/* Responsive Layout for Tablets and Smaller Screens */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column-reverse;
@@ -90,10 +79,6 @@
 
   .hero-text h1 {
     font-size: 2.2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
   }
 
   .hero-image img {

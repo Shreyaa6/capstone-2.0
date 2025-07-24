@@ -13,7 +13,7 @@ const Hero = () => {
         <a href="#customizer">Start Customizing</a>
       </div>
       <div className="hero-image">
-        <img src="/heroImage01.jpeg" alt="Mobile Case Preview" />
+        <img src="https://images.dailyobjects.com/marche/product-images/1101/black-nimbus-magsafe-phone-case-cover-for-iphone-13-images/Black-Nimbus-MagSafe-Phone-Case-Cover-For-iPhone-13.png?tr=cm-pad_resize,v-3" alt="Mobile Case Preview" />
       </div>
     </section>
   );

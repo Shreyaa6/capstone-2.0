@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { products } from '../data/products';
 import '../styles/ProductDetail.css';
 import Footer from './Footer';
+import NavBar from './Navbar';
 
 const ProductDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const product = products.find(p => p.id === parseInt(id));
 
   const [selectedModel, setSelectedModel] = useState('iPhone');
@@ -22,6 +24,7 @@ const ProductDetail = () => {
 
   return (
     <>
+      <NavBar />
       <div className="product-detail">
         <div className="panel left">
           <img src="/heroImage01.jpeg" alt={product.name} className="image" />

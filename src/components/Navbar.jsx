@@ -1,25 +1,39 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import styles from '../styles/NavBar.module.css';
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogoClick = () => navigate('/homepage');
 
+  const showBack = location.pathname !== '/homepage' && location.pathname !== '/';
+
   return (
     <header className={styles.navbar}>
-      <div className={styles.logo} onClick={handleLogoClick}>
-        Destiny
+      <div className={styles.logoContainer}>
+        {showBack && (
+          <button
+            onClick={() => navigate(-1)}
+            className={styles.backButton}
+            aria-label="Go Back"
+          >
+            &larr; Back
+          </button>
+        )}
+        <div className={styles.logo} onClick={handleLogoClick}>
+          Destiny
+        </div>
       </div>
 
       <nav className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`}>
         <Link to="/homepage">Home</Link>
-        <a href="#about">About</a>
+        <Link to="/about">About</Link>
         <Link to="/products">Products</Link>
-        <a href="#services">Services</a>
-        <a href="#blog">Blog</a>
+        <Link to="/services">Services</Link>
+        <Link to="/blog">Blog</Link>
       </nav>
 
       <div className={styles.authButtons}>

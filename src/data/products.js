@@ -1,72 +1,82 @@
+import floral from '../assets/floral.jpg';
+import transs from '../assets/transs.jpg';
+import rugged from '../assets/rugged.jpg';
+import blog2 from '../assets/blog2.jpg';
+import Leather from '../assets/leather.jpg';
+import matte from '../assets/matte.jpg';
+import glitter from '../assets/glitter.jpg';
+import photo from '../assets/photo.jpg';
+import neon from '../assets/neon.jpg';
+import eco from '../assets/eco.jpg';
 export const products = [
   {
     id: 1,
     name: 'Floral Case',
     price: 299,
     type: 'Printed',
-    image: ''
+    image: floral
   },
   {
     id: 2,
     name: 'Transparent Case',
     price: 199,
     type: 'Clear',
-    image: 'https://via.placeholder.com/400?text=Transparent+Case'
+    image: transs
   },
   {
     id: 3,
     name: 'Rugged Armor',
     price: 399,
     type: 'Rugged',
-    image: 'https://via.placeholder.com/400?text=Rugged+Armor'
+    image: rugged
   },
   {
     id: 4,
     name: 'Silicone Soft Back',
     price: 249,
     type: 'Soft',
-    image: 'https://via.placeholder.com/400?text=Silicone+Soft+Back'
+    image: blog2
   },
   {
     id: 5,
     name: 'Leather Wallet Case',
     price: 499,
     type: 'Wallet',
-    image: 'https://via.placeholder.com/400?text=Leather+Wallet+Case'
+    image: Leather
   },
   {
     id: 6,
     name: 'Matte Black Case',
     price: 299,
     type: 'Matte',
-    image: 'https://via.placeholder.com/400?text=Matte+Black+Case'
+    image: matte
   },
   {
     id: 7,
     name: 'Glitter Case',
     price: 349,
     type: 'Shiny',
-    image: 'https://via.placeholder.com/400?text=Glitter+Case'
+    image: glitter
   },
   {
     id: 8,
     name: 'Custom Photo Case',
     price: 449,
     type: 'Personalized',
-    image: 'https://via.placeholder.com/400?text=Custom+Photo+Case'
+    image: photo
   },
   {
     id: 9,
     name: 'Neon Bumper Case',
     price: 379,
     type: 'Bumper',
-    image: 'https://via.placeholder.com/400?text=Neon+Bumper+Case'
+    image: neon
   },
   {
     id: 10,
     name: 'Eco-Friendly Case',
     price: 269,
     type: 'Biodegradable',
-    image: 'https://via.placeholder.com/400?text=Eco-Friendly+Case'
+    image: eco
   }
 ];
